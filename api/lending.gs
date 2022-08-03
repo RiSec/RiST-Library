@@ -18,11 +18,16 @@ function lendingAPI(lendingObj) {
   }
 
   // ここに貸し出し処理(借り出し履歴に貸し出しID, 書籍ID, ユーザID, 貸し出し日を追加)
-  const sheet = sheets.getSheetByName("貸し出し履歴")
-  const lendingNum = sheet.getLastRow()+1
-  const values = [lendingId, lendingObj.bookId, lendingObj.userId, (new Date()).toString(), "0"];
-  sheet.getRange(`A${lendingNum}:E${lendingNum}`).setValues([values]);
+  const lendingHistorySheet = sheets.getSheetByName("貸し出し履歴")
+  const lendingHistoryNum = lendingHistorySheet.getLastRow()+1
+  const historyValues = [lendingId, lendingObj.bookId, lendingObj.userId, (new Date()).toString(), "0"];
+  lendingHistorySheet.getRange(`A${lendingHistoryNum}:E${lendingHistoryNum}`).setValues([historyValues]);
 	
+  const lendingStateSheet = sheets.getSheetByName("貸し出し状況")
+  const lendingStateNum = lendingStateSheet.getLastRow()+1
+  const stateValues = [lendingId];
+  lendingStateSheet.getRange(`A${lendingStateNum}`).setValues([stateValues]);
+
 	return lendingId;
 }
 
