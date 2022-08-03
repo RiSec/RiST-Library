@@ -9,4 +9,5 @@ function getSituation() {
   }
   console.log(sitNum)
   console.log(lendingIDs)
+  return lendingIDs;
 }

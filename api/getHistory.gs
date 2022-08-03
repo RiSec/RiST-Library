@@ -16,6 +16,5 @@ function getHistory() {
   }
 
   console.log(books)
-  
+  return books;
 }
-  

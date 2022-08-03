@@ -14,4 +14,5 @@ function getUsers() {
   }
 
   console.log(users)
+  return users;
 }
