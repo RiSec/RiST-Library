@@ -2,7 +2,7 @@ function getBooks() {
   const sheets = SpreadsheetApp.getActive()
   const sheet = sheets.getSheetByName("書籍")
   const bookNum = sheet.getLastRow()-1
-  const booksAry = sheet.getRange(`A2:F${bookNum+1}`).getValues()
+  const booksAry = sheet.getRange(`A2:F${bookNum+1}`).getDisplayValues()
   let books = []
   for(let i = 0; i < bookNum; i++){
     const book = {
