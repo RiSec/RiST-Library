@@ -1,0 +1,33 @@
+li {
+    list-style: none;
+}
+
+.content{
+    top:10px;
+}
+
+.square1 {
+    position: relative;
+    width: 200px;
+    height: 25px;
+    left: 100px;
+    background: gray;
+ }
+
+.square2{
+    position: relative;
+    margin-top: 25px;
+    width: 200px;
+    height: 25px;
+    left: 100px;
+    background: gray;
+}
+
+.square3{
+    position: relative;
+    margin-top: 25px;
+    width: 200px;
+    height: 25px;
+    left: 100px;
+    background: gray;
+}
