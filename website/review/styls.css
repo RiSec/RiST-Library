@@ -2,18 +2,14 @@ li {
     list-style: none;
 }
 
-.header{
-    font-size: 20px;
-}
-
 .content{
-    font-size: 20px;
-    line-height: 2;
+    top:10px;
 }
 
+.delete-marker {
+    list-style: none;
+}
 
 body{
     font-family: "Sawarabi Gothic";
  }
-
-

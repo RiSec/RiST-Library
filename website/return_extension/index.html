@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head >
     <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
 </head>
 
 <body>
@@ -11,17 +12,19 @@
         
     <main>
         <div class="book">
-            <div class="square1"></div>
-            <div class="square2"></div>
-            <div class="square3"></div>
             <div class ="content">
-                <u1>
-                    <li>ユーザーID</li><br>
-                    <li>貸し出しID</li><br>
-                    <li>パスワード</li><br>
-            
-                </u1>
+                <li>ユーザーID</li>
+                    <input type="text">
+                <li>貸し出しID</li>
+                    <input type="text">
+                <li>パスワード</li><br>
+                    <input type="text">
+                <li>口コミ</li>
+                    <input type="text">
             </div>
+            <input type="radio" name="check" value="返却" checked> 返却
+            <input type="radio" name="check" value="延長" > 延長
+            <input type="submit"  value="送信">
         </div>
     </main>
 </body>
