@@ -9,3 +9,7 @@ li {
 .delete-marker {
     list-style: none;
 }
+
+body{
+    font-family: "Sawarabi Gothic";
+ }

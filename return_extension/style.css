@@ -2,32 +2,18 @@ li {
     list-style: none;
 }
 
-.content{
-    top:10px;
+.header{
+    font-size: 20px;
 }
 
-.square1 {
-    position: relative;
-    width: 200px;
-    height: 25px;
-    left: 100px;
-    background: gray;
+.content{
+    font-size: 20px;
+    line-height: 2;
+}
+
+
+body{
+    font-family: "Sawarabi Gothic";
  }
 
-.square2{
-    position: relative;
-    margin-top: 25px;
-    width: 200px;
-    height: 25px;
-    left: 100px;
-    background: gray;
-}
 
-.square3{
-    position: relative;
-    margin-top: 25px;
-    width: 200px;
-    height: 25px;
-    left: 100px;
-    background: gray;
-}
