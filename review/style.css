@@ -4,6 +4,7 @@ li {
 
 .content{
     top:10px;
+    left:30px;
 }
 
 .delete-marker {
@@ -12,4 +13,5 @@ li {
 
 body{
     font-family: "Sawarabi Gothic";
+    
  }
