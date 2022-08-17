@@ -7,10 +7,23 @@ li {
 }
 
 .content{
-    font-size: 20px;
+    font-size: 40px;
     line-height: 2;
 }
 
+.botton{
+    font-size: 40px;
+    position: relative;
+    top: -100px;
+    left: 280px;     
+}
+
+
+.submit{
+    position: relative;
+    top: -80px;
+    left: 600px;
+}
 
 body{
     font-family: "Sawarabi Gothic";
