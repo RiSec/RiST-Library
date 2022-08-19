@@ -13,16 +13,17 @@ li {
 
 .botton{
     font-size: 40px;
-    position: relative;
+    position: relative; 
     top: -100px;
-    left: 280px;     
+    left: 280px;
 }
-
 
 .submit{
     position: relative;
-    top: -80px;
-    left: 600px;
+    top: -50px;
+    left: 300px;
+    height:30px;
+    width: 100px;
 }
 
 body{
