@@ -1,4 +1,4 @@
-function newBooksAPI() { 
+function newBooksPI() { 
 //二週間前
      var date = new Date();
   var today = Utilities.formatDate(date, 'JST', 'yyyy/MM/dd');
