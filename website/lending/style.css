@@ -20,7 +20,10 @@ li {
     width: 100px;
 }
 
+hr{
+    border-width: medium thin;
+}
+
 body{
-    font-family: "Sawarabi Gothic";
-    
+    font-family: 'Kaisei Opti', serif;
  }
