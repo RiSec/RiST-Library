@@ -28,6 +28,11 @@ label {
     padding-right: 10px;
 }
 
+.submit{
+    position: relative;
+    top: -40px;
+    left: 480px;
+}
 
 hr{
     border-width: medium thin;
