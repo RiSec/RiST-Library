@@ -12,6 +12,7 @@ li {
 }
 .flex img{
     width: 18%;
+    height: 18%;
     position: relative;
     top: 30px;
 }
@@ -42,12 +43,12 @@ body{
  label {
      margin: .4rem 0;
      position: relative;
-     top: -380px;
+     top: -490px;
  }
 
  button{
     position: relative;
-    top: -380px;
+    top: -490px;
  }
 
  
@@ -55,3 +56,4 @@ body{
  hr{
     border-width: medium thin;
 }
+
