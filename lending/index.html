@@ -17,16 +17,23 @@
         
     <main>
         <div class="book">
-            <div class ="content">
-                <li>パスワード <textarea rows="3" cols="33"></textarea></li>
-                <li>ユーザーID <textarea rows="3" cols="33"></textarea></li>  
-                <li>貸し出しID <textarea rows="3" cols="33"></textarea></li>
-                     
-            </div>
-            
-            <div class="submit">
-                <input type="submit"  value="送信" class="submit">
-            </div>
+            <form action="" method="get" class="form-example">
+                <div class="form-example">
+                  <label for="password">パスワード: </label>
+                  <input type="password" name="password" id="password" required>
+                </div>
+                <div class="form-example">
+                  <label for="userID">ユーザーID: </label>
+                  <input type="text" name="text" id="text" required>
+                </div>
+                <div class="form-example">
+                    <label for="lendingID">貸し出しID: </label>
+                    <input type="text" name="text" id="text" required>
+                  </div>
+                <div class="form-example">
+                  <input type="submit" value="送信">
+                </div>
+              </form>
         </div>
     </main>
 </body>
