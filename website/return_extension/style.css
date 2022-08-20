@@ -27,8 +27,11 @@ li {
 }
 
 body{
-    font-family: "Sawarabi Gothic";
-    
+    font-family: 'Kaisei Opti', serif; 
  }
+
+ hr{
+    border-width: medium thin;
+}
 
 
