@@ -1,9 +1,20 @@
-. {
-    float: left;
-   
-  }
+li {
+    list-style: none;
+}
 
-  .form_item {
+hr{
+    border-width: medium thin;
+}
 
-   
-  }
+.form_item{
+    font-size: 20px;
+}
+
+type{
+    position: relative;
+    left: 20px;
+}
+
+body{
+    font-family: 'Kaisei Opti', serif;
+ }

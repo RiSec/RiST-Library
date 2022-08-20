@@ -6,20 +6,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
   <title>書籍一覧</title>
 </head>
 
 <body>
   <h1>書籍一覧</h1>
-
+    <hr />
 
   <div class="flex">
     <img src="img/sample.png" alt="sampele" />
     <div>
-      <p>本タイトル</p>
+      <li>本タイトル</li>
       <p>分野</p>
+      <p>出版年</p>
+      <p>登録日</p>
+      <p>書籍ID</p>
+      
+    <div class="borrowed">
+      <div class="text">
+      貸出可能
+      </div>
+      <div class="circle_img">
+        <img src="img/circle_img.png" alt="circle" />
+      </div>
+      
+     </div>
+
+
+      <div class="search">
+          <label for="site-search"></label>
+          <input type="search" id="site-search" name="q">
+          <button>検索</button>
+      </div>
     </div>
   </div>
 </body>
-
 </html>

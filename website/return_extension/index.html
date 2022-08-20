@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,18 +19,35 @@
     <main>
         <div class="book">
             <div class ="content">
-                <li>ユーザーID</li>
-                    <input type="text">
-                <li>貸し出しID</li>
-                    <input type="text">
-                <li>パスワード</li><br>
-                    <input type="text">
+                <form action="" method="get" class="form-example">
+                    <div class="form-example">
+                      <label for="userID">ユーザーID: </label>
+                      <input type="text" name="text" id="text" required>
+                    </div>
+                    <div class="form-example">
+                        <label for="lendingID">貸し出しID: </label>
+                        <input type="text" name="text" id="text" required>
+                      </div>
+                      <div class="form-example">
+                        <label for="password">パスワード: </label>
+                        <input type="password" name="password" id="password" required>
+                      </div>
+                    <div class="form-example">
+                        <div class="submit">
+                            <input type="submit" value="送信">
+                        </div>
+                    </div>
+                  </form>
+                
                 <li>口コミ</li>
-                    <input type="text">
+                <textarea rows="8" cols="33"></textarea>
+                   
             </div>
-            <input type="radio" name="check" value="返却" checked> 返却
-            <input type="radio" name="check" value="延長" > 延長
-            <input type="submit"  value="送信">
+            <div class="botton">
+                <input type="radio" name="check" value="返却" style="transform:scale(2.0); checked" > 返却
+                <input type="radio" name="check" value="延長" style="transform:scale(2.0);"> 延長
+            </div>
+            
         </div>
     </main>
 </body>

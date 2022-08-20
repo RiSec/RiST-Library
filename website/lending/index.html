@@ -1,35 +1,41 @@
 <!DOCTYPE html>
-<html lang="ja">
-
-<head>
+<head >
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>貸出</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
-
-    <h1>貸出</h1>
-
-    <hr>
-
-    <p>貸出ID</p>
-    <form action="#" method="post">
-        <input type="text">
-    </form>
-    <p>ユーザーID</p>
-    <form action="#" method="post">
-        <input type="text">
-    </form>
-    <p>パスワード</p>
-    <form action="#" method="post">
-        <input type="password">
-    </form>
-
-    <input type="submit" class="Form-Btn" value="送信">
-
+    <h1>
+        貸出
+    </h1>
+    <hr />
+        
+    <main>
+        <div class="book">
+            <form action="" method="get" class="form-example">
+                <div class="form-example">
+                  <label for="password">パスワード: </label>
+                  <input type="password" name="password" id="password" required>
+                </div>
+                <div class="form-example">
+                  <label for="userID">ユーザーID: </label>
+                  <input type="text" name="text" id="text" required>
+                </div>
+                <div class="form-example">
+                    <label for="lendingID">貸し出しID: </label>
+                    <input type="text" name="text" id="text" required>
+                  </div>
+                <div class="form-example">
+                    <div class="submit">
+                        <input type="submit" value="送信">
+                    </div>
+                </div>
+              </form>
+        </div>
+    </main>
 </body>
-
-</html>

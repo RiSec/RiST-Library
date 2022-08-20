@@ -6,22 +6,9 @@ li {
     font-size: 20px;
 }
 
-.content{
-    font-size: 40px;
+.book{
+    font-size: 30px;
     line-height: 2;
-}
-
-.botton{
-    font-size: 40px;
-    position: relative; 
-    top: -100px;
-    left: 280px;
-}
-
-.submit{
-    position: relative;
-    top: 200px;
-    left: 550px;
 }
 
 form.form-example {
@@ -41,12 +28,16 @@ label {
     padding-right: 10px;
 }
 
-body{
-    font-family: 'Kaisei Opti', serif; 
- }
+.submit{
+    position: relative;
+    top: -40px;
+    left: 480px;
+}
 
- hr{
+hr{
     border-width: medium thin;
 }
 
-
+body{
+    font-family: 'Kaisei Opti', serif;
+ }

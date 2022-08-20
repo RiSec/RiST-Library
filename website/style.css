@@ -1,0 +1,25 @@
+li {
+    list-style: none;
+}
+
+.content{
+    top:10px;
+    left:30px;
+}
+
+.delete-marker {
+    list-style: none;
+}
+
+.book{
+    font-size: 35px;
+    line-height: 2;
+}
+
+hr{
+    border-width: medium thin;
+}
+
+body{
+    font-family: 'Kaisei Opti', serif;
+ }
