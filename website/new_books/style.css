@@ -9,13 +9,18 @@ li {
 .content{
     font-size: 40px;
     line-height: 2;
+    
 }
 
 .header{
     font-size: 20px;
 }
 
+hr{
+    border-width: medium thin;
+}
+
 body{
-    font-family: "Sawarabi Gothic";
+    font-family: 'Kaisei Opti', serif;
  }
 
