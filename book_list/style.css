@@ -1,7 +1,57 @@
+li {
+    list-style: none;
+    font-size: 30px;
+    position: relative;
+    left: 20px;
+    top: 30px;
+}
 
 .flex{
     display: flex;
+    
 }
 .flex img{
-    width: 25%;
+    width: 18%;
+    position: relative;
+    top: 30px;
+}
+
+body{
+    font-family: 'Kaisei Opti', serif;
+ }
+
+ p{
+    font-size: 20px;
+    position: relative;
+    left: 50px;
+    top: 20px;
+ }
+ 
+
+ .borrowed{
+    font-size: 30px;
+    position: relative;
+    left: 500px;
+    top: -260px;
+ }
+
+ label {
+    display: block;
+}
+ input,
+ label {
+     margin: .4rem 0;
+     position: relative;
+     top: -380px;
+ }
+
+ button{
+    position: relative;
+    top: -380px;
+ }
+
+ 
+
+ hr{
+    border-width: medium thin;
 }
