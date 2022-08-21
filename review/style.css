@@ -20,12 +20,12 @@ body{
 
  .box {
     margin       : auto;
-    width        : 400px;
+    width        : 600px;
     height       : 150px;
     background   : #d8d7d7;
-    position: relative;
-    left: -430px;
-    top: 20px;
+    position: absolute;
+    left: 0px;
+    top: 100px;
   
   }
 
