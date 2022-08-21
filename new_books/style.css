@@ -13,14 +13,14 @@ li {
 }
 
 .content{
-    font-size: 40px;
+    font-size: 30px;
     line-height: 2;
-    
+    position: relative;
+    left: 10px;
+    top: 15px;
 }
 
-.header{
-    font-size: 20px;
-}
+
 
 hr{
     border-width: medium thin;
