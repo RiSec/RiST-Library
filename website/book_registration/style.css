@@ -26,12 +26,12 @@ type {
 label,
 input {
     display: table-cell;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 label {
     padding-right: 10px;
-    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 body {
@@ -40,6 +40,6 @@ body {
 
 .Form_Btn {
     position: relative;
-    top: -15px;
+    top: -60px;
     left: 480px;
 }
