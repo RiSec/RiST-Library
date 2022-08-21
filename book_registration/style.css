@@ -2,19 +2,44 @@ li {
     list-style: none;
 }
 
-hr{
+hr {
     border-width: medium thin;
 }
 
-.form_item{
-    font-size: 20px;
+.form_item {
+    font-size: 30px;
 }
 
-type{
+form.form_item {
+    display: table;
+}
+
+div.form_item {
+    display: table-row;
+}
+
+type {
     position: relative;
     left: 20px;
 }
 
-body{
+label,
+input {
+    display: table-cell;
+    margin-bottom: 30px;
+}
+
+label {
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+body {
     font-family: 'Kaisei Opti', serif;
- }
+}
+
+.Form_Btn {
+    position: relative;
+    top: -15px;
+    left: 480px;
+}
