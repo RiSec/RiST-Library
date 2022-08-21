@@ -7,7 +7,7 @@ li {
 }
 
 .content{
-    font-size: 40px;
+    font-size: 30px;
     line-height: 2;
 }
 
@@ -16,7 +16,10 @@ li {
     position: relative; 
     top: -100px;
     left: 280px;
+    accent-color: blue;
 }
+
+
 
 .submit{
     position: relative;
