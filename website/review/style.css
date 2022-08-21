@@ -4,6 +4,7 @@ li {
 
 .content{
     position: relative;
+    font-size: 30px;
     top: -260px;
     left:230px;
 }
@@ -25,4 +26,9 @@ body{
     position: relative;
     left: -430px;
     top: 20px;
+  
   }
+
+  hr{
+    border-width: medium thin;
+}
