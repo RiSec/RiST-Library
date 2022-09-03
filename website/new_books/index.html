@@ -23,12 +23,18 @@
             <div class="flex">
                 <img src="img/sample.png" alt="sampele" />
             <div class ="content">
-                <u1>
-                    <li>追加日</li>
-                    <li>本タイトル</li>
+                <u1>for (let row of tokyo) {
+                    console.log(row)
+                    s += `
+                    <li>追加日${row['date']}</li>
+                    <li>本タイトル${row['title']}</li>
+                    `
+                }
                 </u1>
             </div>
             </div>
         </main>
     </body>
+
 </html>
+
