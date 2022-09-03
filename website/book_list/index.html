@@ -14,59 +14,65 @@
 </head>
 
 <body>
-  <h1>書籍一覧</h1>
+  <div class="header">
+    <h1>書籍一覧</h1>
+  </div>
   <hr />
+  <main>
+    <div id="flex">
+      <img src="img/sample.png" alt="sampele" />
+      <div class="content">
+        <u1>
+          <li>本タイトル</li>
+          <li>分野</li>
+          <li>出版年</li>
+          <li>登録日</li>
+          <li>書籍ID</li>
+        </u1>
+        <div id="borrowed">
+          <div id="text">
+            貸出可能
+          </div>
+          <div id="circle_img">
+            <img src="img/circle_img.png" alt="circle" />
+          </div>
 
-  <div id="flex">
-    <img src="img/sample.png" alt="sampele" />
-    <div>
-      <li>本タイトル</li>
-      <p>分野</p>
-      <p>出版年</p>
-      <p>登録日</p>
-      <p>書籍ID</p>
-
-      <div id="borrowed">
-        <div id="text">
-          貸出可能
         </div>
-        <div id="circle_img">
-          <img src="img/circle_img.png" alt="circle" />
+
+
+        <div id="search">
+          <label for="site-search"></label>
+          <input type="search" id="site-search" name="q">
+          <button>検索</button>
         </div>
-
-      </div>
-
-
-      <div id="search">
-        <label for="site-search"></label>
-        <input type="search" id="site-search" name="q">
-        <button>検索</button>
       </div>
     </div>
-  </div>
+  </main>
 </body>
 
 <script>
   const api = 'https://script.google.com/macros/s/AKfycbyGNT9wjDCOd6vtejmkyZvaXCoNJYCkCdBy3zGJlZrjtC3EN2ttnILnN-9fZH4zTtct1g/exec' //URLを挿入
-fetch(api)
+  fetch(api)
     .then(res => res.json())
     .then(date => tenki(data))
 
-function book(data) {
+  function book(data) {
     let s = ''
     const first = data[319] //319が何ものかわからないまま書いている
-    for (let row of first){
-        console.log(row) //デバッグ表示とは？？
-        s +=`
-        <h3>${row['book_name']}</h3>
-        <ul><li>${row['categly']}
+    for (let row of first) {
+      console.log(row) //デバッグ表示とは？？
+      s += `
+        <li>${row['book_name']}</li>
+        <li>${row['categly']}
         <li>${row['year']}</li>
         <li>${row['register_day']}</li>
-        <li>${row['book_id']}</li></ul> //書式設定はでいてない
+        <li>${row['book_id']}</li> //書式設定はでいてない
         `
     }
     document.write(s)
-}
+  }
+  data = [{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"},{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"}]
+
 </script>
 
 </html>
