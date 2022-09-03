@@ -29,6 +29,14 @@ body{
   
   }
 
+
+.search{
+    position: absolute;
+    left: 130px;
+    top: 40px;
+ }
+
+
   hr{
     border-width: medium thin;
 }
