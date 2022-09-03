@@ -33,7 +33,26 @@
                 </u1>
                 <div class="box" id="makeImg"> </div>
             </div>
-        
-       
     </main>
+
+    <script>
+        // 口コミAPIにアクセス
+        const api = 'https://api.aoikujira.com/tenki/week.php?fmt=json&city=319'
+        fetch(api)
+          .then(res => res.json())
+          .then(data => tenki(data))
+        
+        // 結果を表示
+        function tenki(data) {
+          let s = ''
+          const tokyo = data[319] // ？？
+          for (let row of tokyo) {
+            console.log(row) // デバッグ表示
+            s += `
+              <li>本タイトル${row['title']}</li>
+            `
+          }
+          document.write(s)
+        }
+        </script>
 </body>
