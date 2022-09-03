@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
   <div class="header">
     <h1>書籍一覧</h1>
   </div>
@@ -22,12 +23,12 @@
     <div id="flex">
       <img src="img/sample.png" alt="sampele" />
       <div class="content">
-        <u1>
-          <li>本タイトル</li>
-          <li>分野</li>
-          <li>出版年</li>
-          <li>登録日</li>
-          <li>書籍ID</li>
+        <u1 id = "list">
+          <li id = "title">本タイトル</li>
+          <li id = "genre">分野</li>
+          <li id = "publish">出版年</li>
+          <li id = "registration">登録日</li>
+          <li id = "bookId">書籍ID</li>
         </u1>
         <div id="borrowed">
           <div id="text">
@@ -48,9 +49,11 @@
       </div>
     </div>
   </main>
+
 </body>
 
-<script>
+<script> //実行できなかったときにbodyの閉じタグの前に配置してみる
+
   const api = 'https://script.google.com/macros/s/AKfycbyGNT9wjDCOd6vtejmkyZvaXCoNJYCkCdBy3zGJlZrjtC3EN2ttnILnN-9fZH4zTtct1g/exec' //URLを挿入
   fetch(api)
     .then(res => res.json())
@@ -58,18 +61,27 @@
 
   function book(data) {
     let s = ''
-    const first = data[319] //319が何ものかわからないまま書いている
+    const list = data[] //[]内にはAPI進んでから相応の数値を入れる
     for (let row of first) {
-      console.log(row) //デバッグ表示とは？？
+      console.log(row)
       s += `
-        <li>${row['book_name']}</li>
-        <li>${row['categly']}
-        <li>${row['year']}</li>
-        <li>${row['register_day']}</li>
-        <li>${row['book_id']}</li> //書式設定はでいてない
+        <li>${row['title']}</li>
+        <li>${row['genre']}
+        <li>${row['publish']}</li>
+        <li>${row['registration']}</li>
+        <li>${row['bookId']}</li> 
         `
     }
-    document.write(s)
+
+    var myfunc = function () {
+      var myli = document.getElementById("title")
+      var myli = document.getElementById("genre")
+      var myli = document.getElementById("publish")
+      var myli = document.getElementById("registration")
+      var myli = document.getElementById("bookId")
+      myli.innerHTML = ""; //変更後の表記を入れたい
+    }
+
   }
   data = [{ "bookId": "F2qxvscY", "title": "Python自動処理", "genre": "言語", "image": "", "publish": "2022/06/27", "registration": "2022/02/03" }, { "bookId": "F2qxvscY", "title": "Python自動処理", "genre": "言語", "image": "", "publish": "2022/06/27", "registration": "2022/02/03" }]
 
