@@ -1,0 +1,19 @@
+function doGet(e) {
+ var text = e.parameter.text;
+  //検索結果をとる
+  //本を検索
+     const books=getBooks()
+    var preFoundbooks = {
+　　　};
+    for(let i=0; i<books.length; i++){
+      const book=books[i]
+      const title=book.title
+      if(title.indexOf("Python")>=0){
+       　 preFoundbooks.title = book.title;
+        preFoundbooks.image = book.image;
+      }
+    } 
+    //let json = JSON.stringify(preFoundbooks);
+    console.log(preFoundbooks)
+    return　ContentService.createTextOutput(preFoundbooks);
+}
