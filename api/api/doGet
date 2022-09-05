@@ -1,0 +1,32 @@
+function doGet(e) {
+var type = e.parameter.type;
+console.log(type)
+  if(type==="comment"){
+   var comment=commentAPI()
+    var json = JSON.stringify(comment);
+    return　ContentService.createTextOutput(json)
+    }else if(type==="newBooks"){
+    var result=NEWBooksAPI();
+       var json = JSON.stringify(result);
+       console.log(json)
+        return　ContentService.createTextOutput(json)
+   }else if(type==="searchBooks"){
+   var searchBooks=serachBook()
+       var json = JSON.stringify(searchBooks);
+        return　ContentService.createTextOutput(json)
+ }else if(type==="lending"){
+   var lendingBooks=lendingAPI()
+      var json = JSON.stringify(lending);
+      //return　ContentService.createTextOutput(json)
+   }else if(type==="retuen"){
+    var retrnBooks=returnAPI()
+      var json = JSON.stringify(retrnBooks);
+        return　ContentService.createTextOutput(json)
+   }else if(type==="registration"){   
+    var registrationBook=registrationAPI() 
+    var json = JSON.stringify(registrationBook);
+        return　ContentService.createTextOutput(json)  
+  } 
+    console.log(json)
+        return　ContentService.createTextOutput(json)     
+}
