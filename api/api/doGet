@@ -1,4 +1,3 @@
-```JavaScript
 function doGet(e) {
     var type = e.parameter.type;
     console.log(type)
@@ -28,4 +27,3 @@ function doGet(e) {
         return　ContentService.createTextOutput(json6)  
     } 
   }
-  ```
