@@ -1,32 +1,31 @@
+```JavaScript
 function doGet(e) {
-var type = e.parameter.type;
-console.log(type)
-  if(type==="comment"){
-   var comment=commentAPI()
-    var json = JSON.stringify(comment);
-    return　ContentService.createTextOutput(json)
+    var type = e.parameter.type;
+    console.log(type)
+    if(type==="comment"){
+        var comment=commentAPI()
+        var json1 = JSON.stringify(comment);
+        return　ContentService.createTextOutput(json1)
     }else if(type==="newBooks"){
-    var result=NEWBooksAPI();
-       var json = JSON.stringify(result);
-       console.log(json)
-        return　ContentService.createTextOutput(json)
-   }else if(type==="searchBooks"){
-   var searchBooks=serachBook()
-       var json = JSON.stringify(searchBooks);
-        return　ContentService.createTextOutput(json)
- }else if(type==="lending"){
-   var lendingBooks=lendingAPI()
-      var json = JSON.stringify(lending);
-      //return　ContentService.createTextOutput(json)
-   }else if(type==="retuen"){
-    var retrnBooks=returnAPI()
-      var json = JSON.stringify(retrnBooks);
-        return　ContentService.createTextOutput(json)
+        var result=newBooksAPI();
+        var json2 = JSON.stringify(result);
+        return　ContentService.createTextOutput(json2)
+    }else if(type="searchBooks"){
+        var searchBooks=serachBooks()
+        var json3= JSON.stringify(searchBooks);
+        return　ContentService.createTextOutput(json3)
+    }else if(type==="lending"){
+        var lendingBooks=lendingAPI()
+        var json4 = JSON.stringify(lendingBooks);
+        return　ContentService.createTextOutput(json4)
+    }else if(type==="retuen"){
+        var retrnBooks=returnAPI()
+        var json5 = JSON.stringify(retrnBooks);
+        return　ContentService.createTextOutput(json5)
    }else if(type==="registration"){   
-    var registrationBook=registrationAPI() 
-    var json = JSON.stringify(registrationBook);
-        return　ContentService.createTextOutput(json)  
-  } 
-    console.log(json)
-        return　ContentService.createTextOutput(json)     
-}
+        var registrationBook=registrationAPI() 
+        var json6 = JSON.stringify(registrationBook);
+        return　ContentService.createTextOutput(json6)  
+    } 
+  }
+  ```
