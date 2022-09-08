@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="script.js"></script>
   <title>書籍一覧</title>
 </head>
 
@@ -20,7 +19,7 @@
   </div>
   <hr />
   <main>
-    <div id="flex">
+    <div class="flex">
       <img src="img/sample.png" alt="sampele" />
       <div class="content">
         <u1 id = "list">
@@ -30,11 +29,11 @@
           <li id = "registration">登録日</li>
           <li id = "bookId">書籍ID</li>
         </u1>
-        <div id="borrowed">
+        <div class="borrowed">
           <div id="text">
             貸出可能
           </div>
-          <div id="circle_img">
+          <div id="circle">
             <img src="img/circle_img.png" alt="circle" />
           </div>
 
@@ -54,7 +53,7 @@
 
 <script> //実行できなかったときにbodyの閉じタグの前に配置してみる
 
-  const api = 'https://script.google.com/macros/s/AKfycbyGNT9wjDCOd6vtejmkyZvaXCoNJYCkCdBy3zGJlZrjtC3EN2ttnILnN-9fZH4zTtct1g/exec' //URLを挿入
+  const api = 'https://script.google.com/macros/s/AKfycby96DOaKsAQ39dPvgejPWLWBZCcxLr0nij2-Ulx_F4VULMbFGrfB6zQgjYuGFwq9aKTqg/exec？type=searchBooks' //URLを挿入
   fetch(api)
     .then(res => res.json())
     .then(date => tenki(data))
@@ -66,7 +65,7 @@
       console.log(row)
       s += `
         <li>${row['title']}</li>
-        <li>${row['genre']}
+        <li>${row['genre']}</li>
         <li>${row['publish']}</li>
         <li>${row['registration']}</li>
         <li>${row['bookId']}</li> 

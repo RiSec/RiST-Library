@@ -7,8 +7,7 @@ li {
 }
 
 .flex{
-    display: flex;
-    
+    display: flex; 
 }
 .flex img{
     width: 18%;
@@ -16,6 +15,11 @@ li {
     position: relative;
     top: 30px;
 }
+.circle img{
+    width: 20%;
+    height: 20%;
+}
+
 
 body{
     font-family: 'Kaisei Opti', serif;
@@ -32,8 +36,8 @@ body{
  .borrowed{
     font-size: 30px;
     position: relative;
-    left: 500px;
-    top: -260px;
+    left: 400px;
+    top: -200px;
  }
 
  label {
@@ -43,12 +47,12 @@ body{
  label {
      margin: .4rem 0;
      position: relative;
-     top: -490px;
+     top: -440px;
  }
 
  button{
     position: relative;
-    top: -490px;
+    top: -440px;
  }
 
  
