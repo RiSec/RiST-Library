@@ -33,7 +33,7 @@
                     <li>本タイトル</li>
                 </u1>
               </p>
-                <div class="box" id="makeImg"> </div>
+                
             </div>
     </main>
 
@@ -54,6 +54,7 @@
           //console.log(row) // デバッグ表示
           s += `
             <h3>タイトル : ${row['title']}</h3>
+            <li>${row['comText']}</li>
           `
         }
         var mydiv = document.getElementById("idName");
