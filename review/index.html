@@ -28,31 +28,36 @@
             <img src="img/sample.png" alt="sampele" /> 
             </div>
             <div class ="content">
+              <p id="idName">
                 <u1>
                     <li>本タイトル</li>
                 </u1>
+              </p>
                 <div class="box" id="makeImg"> </div>
             </div>
     </main>
 
     <script>
-        // 口コミAPIにアクセス
-        const api = 'https://api.aoikujira.com/tenki/week.php?fmt=json&city=319'
-        fetch(api)
-          .then(res => res.json())
-          .then(data => tenki(data))
-        
-        // 結果を表示
-        function tenki(data) {
-          let s = ''
-          const tokyo = data[319] // ？？
-          for (let row of tokyo) {
-            console.log(row) // デバッグ表示
-            s += `
-              <li>本タイトル${row['title']}</li>
-            `
-          }
-          document.write(s)
+      // 口コミAPIにアクセス
+      const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=comment&title=AboutPython'
+      fetch(api)
+        .then(res => res.json())
+        .then(data => tenki(data))
+      
+      // 結果を表示
+      function tenki(data) {
+        //var data = [{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"},{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"}]
+        let s = ''
+        const tokyo = data //[]内にはAPI進んでから相応の数値を入れる 
+        for (let row of tokyo) {
+          //console.log(row) // デバッグ表示
+          s += `
+            <h3>タイトル : ${row['title']}</h3>
+          `
         }
-        </script>
+        var mydiv = document.getElementById("idName");
+          mydiv.innerHTML = s;
+        //document.write(s)
+      }
+      </script>   
 </body>
