@@ -55,7 +55,7 @@
 
 <script>
 
-  const api = 'https://script.google.com/macros/s/AKfycbyJZt3JBpYkZnP7pPI3DmRRlWCfFzGSmZA-53NXMOwW4c6T0fYddGIat48VMLMYcvx0pQ/exec?type=searchBooks&title' //URLを挿入
+  const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=searchBooks&title=AboutPython' //URLを挿入
   fetch(api)
     .then(res => res.json())
     .then(data => tenki(data))
@@ -65,7 +65,7 @@
     let s = ''
     const tokyo = data
     for (let row of tokyo) {
-      console.log(row)
+      //console.log(row)
       s += `
         <li>タイトル : ${row['title']}</li>
         <li>分野 : ${row['genre']}</li>
