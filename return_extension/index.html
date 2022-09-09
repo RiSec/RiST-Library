@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="ja">
 <head >
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +20,7 @@
     <main>
         <div class="book">
             <div class ="content">
+                <p id="idName">
                 <form action="" method="get" class="form-example">
                     <div class="form-example">
                       <label for="userID">ユーザーID: </label>
@@ -32,22 +34,49 @@
                         <label for="password">パスワード: </label>
                         <input type="password" name="password" id="password" required>
                       </div>
+                    </p>
                     <div class="form-example">
                         <div class="submit">
                             <input type="submit" value="送信" style="width:100px;height:50px">
                         </div>
                     </div>
                   </form>
-                
                 <li>口コミ</li>
                 <textarea rows="8" cols="33"></textarea>
                    
             </div>
+            
             <div class="botton">
                 <input type="radio" name="check" value="返却" style="transform:scale(2.0);  checked" > 返却
                 <input type="radio" name="check" value="延長" style="transform:scale(2.0);"  > 延長
-            </div>
-            
+            </div>    
         </div>
     </main>
-</body>
+    </body>
+
+
+    <script>
+        // 返却延長APIにアクセス
+        const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=return&lendingId=g942scdp&userId=momoka&passwordHash=eee&comText=AboutSecurity'
+        fetch(api)
+          .then(res => res.json())
+          .then(data => tenki(data))
+        
+        // 結果を表示
+        function tenki(data) {
+          let s = ''
+          const tokyo = data  
+          for (let row of tokyo) {
+            //console.log(row) // デバッグ表示
+            s += `
+              <ul><li>ユーザーID${['userId']}</li>
+              <li>貸し出しID${row['lendId']}</li>
+              <li>パスワード${row['passwordhash']}</li></ul>
+            `
+          }
+          var mydiv = document.getElementById("idName");
+            mydiv.innerHTML = s;
+          //document.write(s)
+        }
+        </script>  
+</html>
