@@ -44,4 +44,11 @@
     </main>
 </body>
 
+<script>
+    // 本の登録APIにアクセス
+    const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=registration&title=BBBB&genre=English&image=bbb&publish=2022/06/27'
+    fetch(api)
+      .then(res => res.json())
+      .then(data => book(data))
+      </script>
 </html>

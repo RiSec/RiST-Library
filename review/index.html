@@ -42,15 +42,15 @@
       const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=comment&title=AboutPython'
       fetch(api)
         .then(res => res.json())
-        .then(data => tenki(data))
+        .then(data => book(data))
       
       // 結果を表示
-      function tenki(data) {
+      function book(data) {
         //var data = [{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"},{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"}]
         let s = ''
-        const tokyo = data 
+        const list = data 
         
-        for (let row of tokyo) {
+        for (let row of list) {
           //console.log(row) // デバッグ表示
           s += `
             <h3>タイトル : ${row['title']}</h3>
