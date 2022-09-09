@@ -11,8 +11,7 @@
         <title>新着図書</title>
     </head>
 
-    <body>
-      
+    <body>     
         <div class ="header">
             <h1>
              新着図書 
@@ -21,8 +20,6 @@
         <hr />
         
         <main>
-            <div class="flex">
-                <img src="img/sample.png" alt="sampele" />
             <div class ="content">
                 <p id="idName">
                 <u1>
@@ -31,7 +28,7 @@
                 </u1>
               </p>
             </div>
-            </div>
+            
         </main>
     </body>
     <script>
@@ -49,10 +46,14 @@
         for (let row of list) {
           //console.log(row) // デバッグ表示
           s += `
-            <h3>タイトル : ${row['title']}</h3>
-            <ul><li>${row['genre']}</li>
-            <li>出版日: ${row['publish']}</li></ul>
+           <div class ='con'>
             <img src="${row['image']}" alt="">
+            <div class ='text'>
+              <h3>タイトル : ${row['title']}</h3>
+              <ul><li>${row['genre']}</li>
+              <li>出版日: ${row['publish']}</li></ul>
+            </div>
+            </div>
           `
         }
         var mydiv = document.getElementById("idName");
