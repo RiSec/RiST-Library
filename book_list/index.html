@@ -22,13 +22,15 @@
     <div class="flex">
       <img src="img/sample.png" alt="sampele" />
       <div class="content">
-        <u1 id = "list">
-          <li id = "title">本タイトル</li>
-          <li id = "genre">分野</li>
-          <li id = "publish">出版年</li>
-          <li id = "registration">登録日</li>
-          <li id = "bookId">書籍ID</li>
+        <p id="idName">
+        <u1>
+          <li>本タイトル</li>
+          <li>分野</li>
+          <li>出版年</li>
+          <li>登録日</li>
+          <li>書籍ID</li>
         </u1>
+        </p>
         <div class="borrowed">
           <div id="text">
             貸出可能
@@ -40,7 +42,7 @@
         </div>
 
 
-        <div id="search">
+        <div class="search">
           <label for="site-search"></label>
           <input type="search" id="site-search" name="q">
           <button>検索</button>
@@ -51,38 +53,31 @@
 
 </body>
 
-<script> //実行できなかったときにbodyの閉じタグの前に配置してみる
+<script>
 
-  const api = 'https://script.google.com/macros/s/AKfycby96DOaKsAQ39dPvgejPWLWBZCcxLr0nij2-Ulx_F4VULMbFGrfB6zQgjYuGFwq9aKTqg/exec？type=searchBooks' //URLを挿入
+  const api = 'https://script.google.com/macros/s/AKfycbyJZt3JBpYkZnP7pPI3DmRRlWCfFzGSmZA-53NXMOwW4c6T0fYddGIat48VMLMYcvx0pQ/exec?type=searchBooks&title' //URLを挿入
   fetch(api)
     .then(res => res.json())
-    .then(date => tenki(data))
+    .then(data => tenki(data))
 
-  function book(data) {
+  function tenki(data) {
+    //var data = [{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"},{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"}]
     let s = ''
-    const list = data[] //[]内にはAPI進んでから相応の数値を入れる
-    for (let row of first) {
+    const tokyo = data
+    for (let row of tokyo) {
       console.log(row)
       s += `
-        <li>${row['title']}</li>
-        <li>${row['genre']}</li>
-        <li>${row['publish']}</li>
-        <li>${row['registration']}</li>
-        <li>${row['bookId']}</li> 
+        <li>タイトル : ${row['title']}</li>
+        <li>分野 : ${row['genre']}</li>
+        <li>出版年 : ${row['publish']}</li>
+        <li>登録日 : ${row['registration']}</li>
+        <li>書籍ID : ${row['bookId']}</li> 
         `
     }
-
-    var myfunc = function () {
-      var myli = document.getElementById("title")
-      var myli = document.getElementById("genre")
-      var myli = document.getElementById("publish")
-      var myli = document.getElementById("registration")
-      var myli = document.getElementById("bookId")
-      myli.innerHTML = ""; //変更後の表記を入れたい
-    }
-
+    var mydiv = document.getElementById("idName");
+    mydiv.innerHTML = s;
+    //document.write(s)
   }
-  data = [{ "bookId": "F2qxvscY", "title": "Python自動処理", "genre": "言語", "image": "", "publish": "2022/06/27", "registration": "2022/02/03" }, { "bookId": "F2qxvscY", "title": "Python自動処理", "genre": "言語", "image": "", "publish": "2022/06/27", "registration": "2022/02/03" }]
 
 </script>
 
