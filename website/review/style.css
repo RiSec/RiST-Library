@@ -2,10 +2,14 @@ li {
     list-style: none;
 }
 
+.con{
+    display: flex;
+}
+
 .content{
     position: relative;
     font-size: 30px;
-    top: -260px;
+    top: -30px;
     left:230px;
 }
 

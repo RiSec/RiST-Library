@@ -20,7 +20,6 @@
   <hr />
   <main>
     <div class="flex">
-      <img src="img/sample.png" alt="sampele" />
       <div class="content">
         <p id="idName">
         <u1>
@@ -67,11 +66,16 @@
     for (let row of list) {
       //console.log(row)
       s += `
+      <div class = 'con'>
+        <img src="${row['image']}" alt="">
+      <div class = 'text'>
         <ul><li>タイトル : ${row['title']}</li>
         <li>分野 : ${row['genre']}</li>
         <li>出版年 : ${row['publish']}</li>
         <li>登録日 : ${row['registration']}</li>
         <li>書籍ID : ${row['bookId']}</li></ul>
+        </div>
+        </div>
         `
     }
     var mydiv = document.getElementById("idName");

@@ -24,9 +24,6 @@
             <button>検索</button>
           </div>
           
-        <div class="book">
-            <img src="img/sample.png" alt="sampele" /> 
-            </div>
             <div class ="content">
               <p id="idName">
                 <u1>
@@ -53,8 +50,13 @@
         for (let row of list) {
           //console.log(row) // デバッグ表示
           s += `
+            <div class = 'con'>
+              <img src="${row['image']}" alt="">
+            <div class = 'text'>
             <h3>タイトル : ${row['title']}</h3>
             <li>${row['comText']}</li>
+            </div>
+            </div>
           `
         }
         var mydiv = document.getElementById("idName");
