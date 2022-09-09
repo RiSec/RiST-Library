@@ -46,13 +46,15 @@ body{
  input,
  label {
      margin: .4rem 0;
-     position: relative;
-     top: -440px;
+     position: absolute;
+     left: 280px;
+     top: 40px;
  }
 
  button{
-    position: relative;
-    top: -440px;
+    position: absolute;
+    left: 460px;
+    top: 45px;
  }
 
  
