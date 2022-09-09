@@ -55,7 +55,7 @@
 
 <script>
 
-  const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=searchBooks&title=AboutPython' //URLを挿入
+  const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=searchBooks&title' //URLを挿入
   fetch(api)
     .then(res => res.json())
     .then(data => tenki(data))
@@ -67,11 +67,11 @@
     for (let row of tokyo) {
       //console.log(row)
       s += `
-        <li>タイトル : ${row['title']}</li>
+        <ul><li>タイトル : ${row['title']}</li>
         <li>分野 : ${row['genre']}</li>
         <li>出版年 : ${row['publish']}</li>
         <li>登録日 : ${row['registration']}</li>
-        <li>書籍ID : ${row['bookId']}</li> 
+        <li>書籍ID : ${row['bookId']}</li></ul>
         `
     }
     var mydiv = document.getElementById("idName");

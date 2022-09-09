@@ -1,0 +1,3 @@
+[submodule "discordbot-ristlibrary"]
+	path = discordbot-ristlibrary
+	url = https://github.com/youxi0926/discordbot-ristlibrary
