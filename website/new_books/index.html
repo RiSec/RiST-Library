@@ -12,6 +12,7 @@
     </head>
 
     <body>
+      
         <div class ="header">
             <h1>
              新着図書 
@@ -23,37 +24,40 @@
             <div class="flex">
                 <img src="img/sample.png" alt="sampele" />
             <div class ="content">
+                <p id="idName">
                 <u1>
                     <li>追加日</li>
                     <li>本タイトル</li>
                 </u1>
+              </p>
             </div>
             </div>
         </main>
     </body>
-    
-     <script>
-        // 新着図書APIにアクセス
-        const api = 'https://api.aoikujira.com/tenki/week.php?fmt=json&city=319'
-        fetch(api)
-          .then(res => res.json())
-          .then(data => tenki(data))
-        
-        // 結果を表示
-        function tenki(data) {
-          let s = ''
-          const tokyo = data[319] // 東京の情報 
-          for (let row of tokyo) {
-            console.log(row) // デバッグ表示
-            s += `
-              <li>追加日${row['registration']}</li>
-              <li>本タイトル${row['title']}</li>
-            `
-          }
-          document.write(s)
+    <script>
+      // 新着図書APIにアクセス
+      const api = 'https://script.google.com/macros/s/AKfycbyJZt3JBpYkZnP7pPI3DmRRlWCfFzGSmZA-53NXMOwW4c6T0fYddGIat48VMLMYcvx0pQ/exec?type=newBooks'
+      fetch(api)
+        .then(res => res.json())
+        .then(data => tenki(data))
+      
+      // 結果を表示
+      function tenki(data) {
+        //var data = [{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"},{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"}]
+        let s = ''
+        const tokyo = data //[]内にはAPI進んでから相応の数値を入れる 
+        for (let row of tokyo) {
+          //console.log(row) // デバッグ表示
+          s += `
+            <h3>タイトル : ${row['title']}</h3>
+            <ul><li>${row['genre']}</li>
+            <li>出版日: ${row['publish']}</li></ul>
+          `
         }
-        data = [{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"},{"bookId":"F2qxvscY","title":"Python自動処理","genre":"言語","image":"","publish":"2022/06/27","registration":"2022/02/03"}]
-        </script>
-    
+        var mydiv = document.getElementById("idName");
+          mydiv.innerHTML = s;
+        //document.write(s)
+      }
+      </script>   
 </html>
 
