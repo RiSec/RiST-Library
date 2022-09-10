@@ -26,9 +26,9 @@
           
             <div class ="content">
               <p id="idName">
-                <u1>
+                <!--<u1>
                     <li>本タイトル</li>
-                </u1>
+                </u1>-->
               </p>
                 
             </div>
@@ -36,7 +36,7 @@
 
     <script>
       // 口コミAPIにアクセス
-      const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=comment&title=AboutPython'
+      const api = 'https://script.google.com/macros/s/AKfycbySXXHDLzsV7degTtYN1HF1siX51r7Il0K-vfvmwwDGlof7ZqpP77zo-UgG4L71nPIlOA/exec?type=comment'
       fetch(api)
         .then(res => res.json())
         .then(data => book(data))
