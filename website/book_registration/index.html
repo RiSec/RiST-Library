@@ -20,7 +20,11 @@
     <main>
         <div class="book">
             <p id="idName">
-            <form action="" method="get" class="form_item">
+            <form action="https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=registration" method="get" class="form_item">
+                <div class="form_item">
+                    <label for="type"></label>
+                    <input type="text" name="type" id="type" value="registration" style="display:none" required>
+                </div>
                 <div class="form_item">
                     <label for="title">書籍名:</label>
                     <input type="text" name="title" id="title" required>
@@ -45,12 +49,12 @@
     </main>
 </body>
 
-<script>
+<!-- <script>
     // 本の登録APIにアクセス
     const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=registration&title=BBBB&genre=English&image=bbb&publish=2022/06/27'
     fetch(api)
         .then(res => res.json())
         .then(data => book(data))
-</script> 
+</script>  -->
 
 </html>
