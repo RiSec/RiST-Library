@@ -18,10 +18,10 @@
     <hr />
         
     <main>
-        <div class="book">
             <div class ="content">
                 <p id="idName">
-                <form action="" method="get" class="form-example">
+                <form method="post" action="confirm.php"></form>
+                <form action="https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=return&lendingId=g942scdp&userId=momoka&passwordHash=eee&comText=AboutSecurity" method="get" class="form-example" >
                     <div class="form-example">
                       <label for="userID">ユーザーID: </label>
                       <input type="text" name="text" id="text" required>
@@ -50,19 +50,19 @@
                 <input type="radio" name="check" value="返却" style="transform:scale(2.0);  checked" > 返却
                 <input type="radio" name="check" value="延長" style="transform:scale(2.0);"  > 延長
             </div>    
-        </div>
+        
     </main>
     </body>
 
 
     <script>
-        // 返却延長APIにアクセス
+        /*返却延長APIにアクセス
         const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=return&lendingId=g942scdp&userId=momoka&passwordHash=eee&comText=AboutSecurity'
         fetch(api)
           .then(res => res.json())
           .then(data => book(data))
         
-        // 結果を表示
+         結果を表示
         function book(data) {
           let s = ''
           const list = data  
@@ -77,6 +77,7 @@
           var mydiv = document.getElementById("idName");
             mydiv.innerHTML = s;
           //document.write(s)
-        }
+        }*/
+       
         </script>  
 </html>
