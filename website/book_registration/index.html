@@ -19,6 +19,7 @@
 
     <main>
         <div class="book">
+            <p id="idName">
             <form
                 action="https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=registration&title=BBBB&genre=English&image=bbb&publish=2022/06/27"
                 method="get" class="form_item">
@@ -30,14 +31,15 @@
                     <label for="genre">分野:</label>
                     <input genre="text">
                 </div>
-                <div class="year">
-                    <label for="year">出版年:</label>
+                <div class="publish">
+                    <label for="publish">出版年:</label>
                     <input year="number">
                 </div>
-                <div class="img">
-                    <label for="img">表紙写真:</label>
+                <div class="image">
+                    <label for="image">表紙写真:</label>
                     <input type="file" name="example" accept="image/jpeg, image/png">
                 </div>
+            </p>
                 <input type="submit" class="Form_Btn" value="送信">
             </form>
         </div>
