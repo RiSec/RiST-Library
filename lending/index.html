@@ -48,7 +48,7 @@
         const t2 = document.getElementById("bookId").value;
         const t3 = document.getElementById("password").value;
 
-        let url = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=lending' + '&userId=' + t1 + '&bookId' + t2 + '&passwordHash=' + t3
+        let url = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=lending' + '&userId=' + t1 + '&bookId=' + t2 + '&passwordHash=' + t3
 
         fetch(url)
             .then(res => res.json())
