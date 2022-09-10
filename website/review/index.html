@@ -36,7 +36,7 @@
 
     <script>
       // 口コミAPIにアクセス
-      const api = 'https://script.google.com/macros/s/AKfycbySXXHDLzsV7degTtYN1HF1siX51r7Il0K-vfvmwwDGlof7ZqpP77zo-UgG4L71nPIlOA/exec?type=comment'
+      const api = 'https://script.google.com/macros/s/AKfycbzEJwE1W1JcyCZWyYREV6fR8ULIZ-n28ArWUtCd4OLvM6NlQQZ4oqBJMBvC3gXPt4dqYw/exec?type=comment'
       fetch(api)
         .then(res => res.json())
         .then(data => book(data))
@@ -54,7 +54,7 @@
               <img src="${row['image']}" alt="">
             <div class = 'text'>
             <h3>タイトル : ${row['title']}</h3>
-            <li>${row['comText']}</li>
+            <li>${row['registration']}</li>
             </div>
             </div>
           `
