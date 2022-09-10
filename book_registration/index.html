@@ -20,20 +20,18 @@
     <main>
         <div class="book">
             <p id="idName">
-            <form
-                action="https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=registration&title=BBBB&genre=English&image=bbb&publish=2022/06/27"
-                method="get" class="form_item">
-                <div class="title">
+            <form action="" method="get" class="form_item">
+                <div class="form_item">
                     <label for="title">書籍名:</label>
-                    <input title="text">
+                    <input title="text" name="text" id="text" required>
                 </div>
-                <div class="genre">
+                <div class="form_item">
                     <label for="genre">分野:</label>
-                    <input genre="text">
+                    <input genre="text" name="text" id="text" required>
                 </div>
-                <div class="publish">
+                <div class="form_item">
                     <label for="publish">出版年:</label>
-                    <input year="number">
+                    <input year="number" name="text" id="text" required>
                 </div>
                 <div class="image">
                     <label for="image">表紙写真:</label>
@@ -47,12 +45,12 @@
     </main>
 </body>
 
-<!-- <script>
+<script>
     // 本の登録APIにアクセス
     const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=registration&title=BBBB&genre=English&image=bbb&publish=2022/06/27'
     fetch(api)
         .then(res => res.json())
         .then(data => book(data))
-</script> -->
+</script> 
 
 </html>
