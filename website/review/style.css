@@ -8,6 +8,10 @@ li {
 
 .con{
     display: flex;
+    font-size: 30px;
+    position: relative;
+    left: -180px;
+    top: 30px;
 }
 
 .con img{
