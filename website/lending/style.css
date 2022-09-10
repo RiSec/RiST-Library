@@ -11,11 +11,11 @@ li {
     line-height: 2;
 }
 
-form.form-example {
+form.book {
     display: table;
 }
 
-div.form-example {
+div.book {
     display: table-row;
 }
 
