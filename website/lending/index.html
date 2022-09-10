@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<head >
+<html lang="ja">
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
@@ -15,28 +17,46 @@
         貸出
     </h1>
     <hr />
-        
+
     <main>
         <div class="book">
-            <form action="https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=lending&userId=kaho&bookId=Td2pvb9K" method="get" class="form-example">
                 <div class="password">
-                  <label for="password">パスワード: </label>
-                  <input password="password" name="password" class="pass" required>
+                    <label for="password">パスワード: </label>
+                    <input id="password" type="password" name="password" required>
                 </div>
-                <div class="userID">
-                  <label for="userID">ユーザーID: </label>
-                  <input user="text" name="text" class="text" required>
+                <div class="userId">
+                    <label for="userId">ユーザーID: </label>
+                    <input id="userId" type="text" name="userId" required>
                 </div>
-                <div class="lendingID">
+                <div class="lendingId">
                     <label for="bookId">書籍ID: </label>
-                    <input lending="text" name="text" class="text" required>
-                  </div>
+                    <input id="bookId" type="text" name="bookId" required>
+                </div>
                 <div class="submit">
                     <div class="submit">
-                        <input type="submit" value="送信">
+                        <input type="button" onClick="submit();" value="送信">
                     </div>
                 </div>
-              </form>
         </div>
     </main>
 </body>
+
+<script>
+    function submit() {
+
+        const t1 = document.getElementById("userId").value; 
+        const t2 = document.getElementById("bookId").value;
+        const t3 = document.getElementById("password").value;
+
+        let url = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=lending' + '&userId=' + t1 + '&bookId' + t2 + '&passwordHash=' + t3
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => alert(data))
+    }
+       
+
+
+</script>
+
+</html>
