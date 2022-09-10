@@ -20,14 +20,14 @@
     <main>
             <div class ="content">
                 <p id="idName">
-                <form action="" method="get" class="form-example" >
+                
                     <div class="form-example">
                         <label for="userID">ユーザーID: </label>
-                        <input type="text" name="text" id="text" required>
+                        <input type="text" name="userID" id="userID" required>
                     </div>
                     <div class="form-example">
                         <label for="lendingID">貸し出しID: </label>
-                        <input type="text" name="text" id="text" required>
+                        <input type="text" name="lendingID" id="lendingID" required>
                     </div>
                     <div class="form-example">
                         <label for="password">パスワード: </label>
@@ -36,18 +36,18 @@
                     </p>
                     <div class="form-example">
                         <div class="submit">
-                            <input type="submit" value="送信" style="width:100px;height:50px">
+                            <input type="button" onClick="submit();" value="送信" style="width:100px;height:50px" />
                         </div>
                     </div>
-                  </form>
+                  
                 <li>口コミ</li>
-                <textarea rows="8" cols="33"></textarea>
+                <textarea rows="8" cols="33" id="comText"></textarea>
                    
             </div>
             
             <div class="botton">
-                <input type="radio" name="check" value="返却" style="transform:scale(2.0);  checked" > 返却
-                <input type="radio" name="check" value="延長" style="transform:scale(2.0);"  > 延長
+                <input type="radio" name="check" value="返却" style="transform:scale(2.0)" checked> 返却
+                <input type="radio" name="check" value="延長" style="transform:scale(2.0)" > 延長
             </div>    
         
     </main>
@@ -55,28 +55,21 @@
 
 
     <script>
-        返却延長APIにアクセス
-        const api = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=return&lendingId=g942scdp&userId=momoka&passwordHash=eee&comText=AboutSecurity'
-        fetch(api)
-          .then(res => res.json())
-          .then(data => book(data))
+      function submit() {
+
+        const t1 = document.getElementById("lendingID").value; 
+        const t2 = document.getElementById("userID").value;
+        const t3 = document.getElementById("password").value;
+        const t4 = document.getElementById("comText").value;
         
-         /*結果を表示
-        function book(data) {
-          let s = ''
-          const list = data  
-          for (let row of list) {
-            //console.log(row) // デバッグ表示
-            s += `
-              <ul><li>ユーザーID${['userId']}</li>
-              <li>貸し出しID${row['lendId']}</li>
-              <li>パスワード${row['passwordhash']}</li></ul>
-            `
-          }
-          var mydiv = document.getElementById("idName");
-            mydiv.innerHTML = s;
-          //document.write(s)
-        }
+        let url = 'https://script.google.com/macros/s/AKfycbwta1XCUdufTe3FdDrT0vqFZDcf2FNnjlqLa562k_f2qOuLbb7Zr2sMZDGJhqCXCYzMDw/exec?type=return' + '&lendingId='+t1 + '&userId='+t2 + '&passwordHash='+t3 + '&comText='+t4
+    
+
+        fetch(url)
+          .then(res => res.json())
+          .then(data => alert(data))
+      }
+      
        
         </script>  
 </html>
